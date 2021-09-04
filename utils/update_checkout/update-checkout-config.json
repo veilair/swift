@@ -2,9 +2,9 @@
     "ssh-clone-pattern": "git@github.com:%s.git",
     "https-clone-pattern": "https://github.com/%s.git",
     "repos" : {
-       "swift": {
+        "swift": {
             "remote": { "id": "apple/swift" } },
-       "cmark": {
+        "cmark": {
             "remote": { "id": "apple/swift-cmark" } },
         "llbuild": {
             "remote": { "id": "apple/swift-llbuild" } },
@@ -53,7 +53,7 @@
             "remote": { "id": "KitWare/CMake" },
             "platforms": [ "Linux" ]
         },
-       "indexstore-db": {
+        "indexstore-db": {
             "remote": { "id": "apple/indexstore-db" } },
         "sourcekit-lsp": {
             "remote": { "id": "apple/sourcekit-lsp" } },
@@ -66,7 +66,7 @@
     },
     "default-branch-scheme": "main",
     "branch-schemes": {
-       "main": {
+        "main": {
             "aliases": ["master", "swift/main", "main"],
             "repos": {
                 "llvm-project": "swift/main",
@@ -99,7 +99,7 @@
                 "swift-installer-scripts": "main"
             }
         },
-       "release/5.5": {
+        "release/5.5": {
             "aliases": ["release/5.5", "swift/release/5.5"],
             "repos": {
                 "llvm-project": "swift/release/5.5",
@@ -254,7 +254,7 @@
                 "swift-installer-scripts": "main"
             }
         },
-       "swift-3.0-branch" : {
+        "swift-3.0-branch" : {
             "aliases": ["swift-3.0-branch"],
             "repos": {
                 "llvm-project": "swift/swift-3.0-branch",
@@ -386,7 +386,7 @@
                 "swift-installer-scripts": "main"
             }
         },
-       "swift-5.1-branch" : {
+        "swift-5.1-branch" : {
             "aliases": ["swift-5.1-branch", "swift/swift-5.1-branch"],
             "repos": {
                 "llvm-project": "swift/swift-5.1-branch",
@@ -409,7 +409,7 @@
                 "swift-installer-scripts": "main"
             }
         },
-       "swift-5.2-branch": {
+        "swift-5.2-branch": {
             "aliases": ["swift-5.2-branch", "swift/swift-5.2-branch"],
             "repos": {
                 "llvm-project": "swift/swift-5.2-branch",
@@ -434,7 +434,7 @@
                 "swift-installer-scripts": "main"
             }
         },
-       "release/5.3": {
+        "release/5.3": {
             "aliases": ["release/5.3", "swift/release/5.3"],
             "repos": {
                 "llvm-project": "swift/release/5.3",
@@ -487,7 +487,7 @@
                 "swift-installer-scripts": "main"
             }
         },
-       "release/5.3-20201012": {
+        "release/5.3-20201012": {
             "aliases": ["release/5.3-20201012"],
             "repos": {
                 "llvm-project": "swift/release/5.3",
