@@ -1,0 +1,22 @@
+// RUN: %target-typecheck-verify-swift  -disable-availability-checking
+// REQUIRES: concurrency
+
+@available(SwiftStdlib 5.1, *)
+func test_taskGroup_cancelAll() async {
+    await withTaskGroup(of: Int.self, returning: Void.self) { group in
+        group.spawn {
+            await Task.sleep(3_000_000_000)
+            let c = Task.isCancelled
+            print("group task isCancelled: \(c)")
+            return 0
+       }
+
+       group.spawn {
+         group.cancelAll() // expected-error{{reference to captured parameter 'group' in concurrently-executing code}}
+         return 0
+       }
+       _ = await group.next()
+    }
+
+    print("done")
+}

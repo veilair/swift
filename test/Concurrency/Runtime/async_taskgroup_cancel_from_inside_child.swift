@@ -22,13 +22,13 @@ func test_taskGroup_cancel_from_inside_child() async {
   }
 
   let result = await withTaskGroup(of: Int.self, returning: Int.self) { group in
-    let firstAdded = group.spawnUnlessCancelled { [group] in // must explicitly capture, as the task executes concurrently
-      group.cancelAll() // allowed
+    let firstAdded = group.spawnUnlessCancelled {
       print("first")
       return 1
     }
     print("firstAdded: \(firstAdded)") // CHECK: firstAdded: true
 
+    group.cancelAll()
     let one = await group.next()
 
     let secondAdded = group.spawnUnlessCancelled {
